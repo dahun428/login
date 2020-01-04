@@ -1,0 +1,15 @@
+package cloudstudying;
+
+public class pratice36 {
+
+	public static void main(String[] args) {
+  
+		double[] grade = {3.45 , 2.82, 3.85, 3.94};
+		
+		System.out.printf("1ÇÐ³â : %.2f\n", grade[0]);
+
+		
+		
+	}
+
+}

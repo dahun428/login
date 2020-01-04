@@ -1,0 +1,48 @@
+package com.javalc.AlbaApp;
+
+public class AlbaAppCon {
+
+	public static void main(String[] args) {
+
+		
+		
+		
+	}
+
+}
+
+
+class AlbaCal{
+	
+	double Time_Money;
+	double [] Time_noon;
+	double [] Time_night;
+	
+	public double Total() {
+		
+		return getNoonMoney() + getNightMoney();
+	}
+
+	public double getNightMoney() {
+		
+		for(int i = 0; i < Time_night.length; i++) {
+				
+			Time_Money = Time_Money * Time_night[i];
+		}
+		
+		return Time_Money;
+	}
+
+	public double getNoonMoney() {
+		for(int i = 0; i < Time_noon.length; i++) {
+			
+			Time_Money = Time_Money * Time_noon[i];
+		}
+		
+		return Time_Money;
+	}
+	
+	
+	
+	
+}

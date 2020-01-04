@@ -1,0 +1,28 @@
+package cloudstudying;
+
+public class pratice32 {
+
+ 
+	public static int sum(int max) {
+	    int sum = 0;
+
+	    // 반복 계산: 1 + 2 + ... + max
+	    for (int i = 1; i <= max; i++) {      
+	      sum += i;
+	    }
+	    // 결과 반환
+	    return sum ;
+	  }
+	
+ 	public static void main(String[] args) {
+	 
+ 	    int n = 5; 
+
+ 	     int result = sum(n);
+
+ 	     System.out.printf("정수의 총합(1~%d) => %d", n, result);
+		
+	
+		
+	}
+}

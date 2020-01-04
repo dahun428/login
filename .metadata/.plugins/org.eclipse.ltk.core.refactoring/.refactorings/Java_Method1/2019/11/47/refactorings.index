@@ -1,0 +1,6 @@
+1574152760094	Convert local variable 'valueOfSupply' to field
+1574152782412	Convert local variable 'vatRate' to field
+1574152795133	Convert local variable 'vat' to field
+1574152806594	Convert local variable 'total' to field
+1574152844462	Extract method 'getVat'
+1574152854369	Extract method 'getTotal'

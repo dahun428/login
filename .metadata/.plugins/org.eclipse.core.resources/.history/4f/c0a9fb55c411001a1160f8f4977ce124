@@ -1,0 +1,23 @@
+package cloudstudying;
+
+public class pratice45 {
+
+	public static void main(String[] args) {
+ 
+		int type = 1;
+		switch(type) {
+			case 1 :
+				System.out.println(57);
+				break;
+			case 2 :
+				System.out.println(34);
+				break;
+			case 3 :
+				System.out.println(93);
+				break;
+		}
+		
+		
+	}
+
+}

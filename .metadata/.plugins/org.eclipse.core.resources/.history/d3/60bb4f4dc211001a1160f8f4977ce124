@@ -1,0 +1,20 @@
+package cloudstudying;
+
+
+class Student{
+	String name ;
+	Student(String name){
+		this.name = name ;
+	}
+}
+
+public class pratice44 {
+	
+	public static void main(String[] args) {
+		
+		Student s1 = new Student("¡§¥Ÿ»∆");
+		System.out.println(s1);
+ 
+	}
+
+}

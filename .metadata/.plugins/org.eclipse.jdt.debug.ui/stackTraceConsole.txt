@@ -1,0 +1,2 @@
+	panel.add(label1);
+		panel.add(kr);

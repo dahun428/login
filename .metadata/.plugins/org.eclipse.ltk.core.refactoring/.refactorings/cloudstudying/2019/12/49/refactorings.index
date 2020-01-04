@@ -1,0 +1,8 @@
+1575218409768	Delete element
+1575274268113	Rename local variable 'topIndex'
+1575274285010	Rename local variable 'i'
+1575282301763	Delete element
+1575282425411	Rename type 'Dog'
+1575284195488	Extract method 'getArea'
+1575284213828	Extract method 'getColor'
+1575285389589	Extract method 'getRoundSide'

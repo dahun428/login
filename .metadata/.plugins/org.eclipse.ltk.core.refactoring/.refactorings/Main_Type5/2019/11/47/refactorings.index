@@ -1,0 +1,9 @@
+1574097260006	Convert local variable 'ValueOfSupply' to field
+1574097273227	Convert local variable 'VatRate' to field
+1574097282954	Convert local variable 'ExpenseRate' to field
+1574097311943	Extract method 'getVat'
+1574097364539	Extract method 'getTotal'
+1574097403352	Extract method 'getExpense'
+1574097434828	Extract method 'getIncome'
+1574097483182	Extract method 'getDividend1'
+1574145711753	Copy compilation unit

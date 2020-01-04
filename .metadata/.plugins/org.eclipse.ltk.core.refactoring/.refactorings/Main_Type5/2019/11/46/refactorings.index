@@ -1,0 +1,38 @@
+1573904437637	Delete element
+1573904974862	Extract local variable 'ValueOfSupply'
+1573905057023	Extract local variable 'VatRate'
+1573905295904	Extract local variable 'vat'
+1573905329163	Extract local variable 'total'
+1573905399112	Extract local variable 'expense'
+1573905425325	Extract local variable 'income'
+1573905551231	Extract local variable 'dividend1'
+1573905561045	Extract local variable 'dividend2'
+1573905570559	Extract local variable 'dividend3'
+1573907803071	Move compilation unit
+1573908302542	Copy file
+1573908320280	Rename resource 'AccountingApp2.java'
+1573908408983	Copy file
+1573908506660	Move file
+1573908508382	Move file
+1573908510131	Move file
+1573908882932	Copy compilation unit
+1573911261689	Copy compilation unit
+1573912298679	Copy compilation unit
+1573912424823	Extract method 'getVAT'
+1573913111283	Convert local variable 'ValueOfSupply' to field
+1573913123953	Convert local variable 'VatRate' to field
+1573913186836	Extract method 'getTotal'
+1573913265462	Extract method 'getExpense'
+1573913307478	Convert local variable 'ExpenseRate' to field
+1573913396956	Extract method 'getIncome'
+1573913448161	Extract method 'getDividend'
+1573913556221	Extract method 'print'
+1573915416800	Copy compilation unit
+1573915648765	Convert local variable 'ValueOfSupply' to field
+1573915673936	Convert local variable 'VatRate' to field
+1573915700127	Convert local variable 'ExpenseRate' to field
+1573915763869	Extract method 'getVat'
+1573915820699	Extract method 'getTotal'
+1573915881711	Extract method 'getExpense'
+1573915903032	Extract method 'getIncome'
+1573918818527	Copy compilation unit

@@ -1,0 +1,40 @@
+package cloudstudying;
+
+public class pratice26 {
+
+	double T ;//키
+	double W ;//체중
+	double BMI;//비만도 지수
+	
+	public void BMI(double T, double W) {
+		this.T = T;
+		this.W = W;
+		BMI = W / T*T;
+		
+		if(BMI > 30) {
+			System.out.println("비만입니다.");
+		}
+		else if(BMI >= 25) {
+			System.out.println("과체중입니다.");
+		}
+		else if(BMI >= 18.5) {
+			System.out.println("정상입니다.");
+		}
+		else {
+			System.out.println("저체중입니다.");
+		}
+
+	}
+	 public static String result(double T, double W) {
+		    return BMI;
+		  }  
+	public static void main(String[] args) {
+ 
+		/*
+		 * System.out.printf("BMI : %.2f ", );
+		 */
+	/*System.out.printf("Tom의 오디션 결과: %s\n", result(tomVocal, tomDance));
+*/
+	}
+
+}

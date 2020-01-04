@@ -1,0 +1,29 @@
+package cloudstudying03;
+
+public class pratice05 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Squre05{
+	
+	int lenght;
+	String color;
+	
+	public int getArea(int lenght) {	
+		this.lenght = lenght;
+		return lenght*lenght;
+		
+	}
+	public String getColor(String color) {
+		this.color = color;
+		return color;
+	}
+	public void squreinfo() {
+		System.out.printf("%d , %s", getArea(), getColor());
+	}
+	
+}

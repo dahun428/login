@@ -1,0 +1,21 @@
+package cloudstudying;
+
+public class pratice34 {
+
+	public static void main(String[] args) {
+ 
+		int sum = 0;
+		for(int i = 0 ; i <=10 ; i++) {
+			if( i % 3 == 0) {
+				continue;
+			}
+			System.out.printf("%d", i);
+			if( i % 3 ==0) {
+				break;
+			}
+			sum += i;
+		}
+		System.out.printf("\n => %d", sum);
+	}
+
+}

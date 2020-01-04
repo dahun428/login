@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p> 웹브라우저를 통해 서버에 어떤 정보를 요청하는 것은 request 라고 합니다.
+그리고 이런 요청 정보는request 객체가 관리합니다.
+</p>
+<pre>
+getContextPath() : 웹어플리케이션의 컨텍스트 패스를 얻습니다.
+getMethod() : get방식과 post 방식을 구분할 수 있습니다.
+getSession() : 세션 객체를 얻습니다.
+getProtocol() : 해당 프로토콜을 얻습니다.
+getRequestURL() : 요청 URL을 얻습니다.
+getRequestURI() :  요청 URI를 얻습니다.
+getQuerySting() : 쿼리스트링을 얻습니다.
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,31 @@
+package cloudstudying03;
+
+public class pratice04 {
+
+	public static void main(String[] args) {
+		bread b1 = new bread();
+		bread b2 = new bread();
+		bread b3 = new bread();
+		
+		b1.output("ÆÏ", "È£»§", 600);
+		b2.output("¾ßÃ¤", "È£»§", 700);
+		b3.output("ÇÇÀÚ", "È£»§", 900);
+	}
+
+}
+class bread{
+	
+	String name;
+	String category;
+	int price;
+	
+	public void output(String name, String category, int price) {
+		this.name = name;
+		this.category = category;
+		this.price = price;
+		
+		System.out.printf("%s %s : %d ¿ø\n", name , category, price);
+		
+	}
+	
+}

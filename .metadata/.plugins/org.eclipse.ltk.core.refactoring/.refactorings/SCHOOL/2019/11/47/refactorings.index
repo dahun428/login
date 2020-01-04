@@ -1,0 +1,16 @@
+1574181352897	Move compilation unit
+1574184788572	Convert local variable 'tname' to field
+1574184800605	Convert local variable 'tkor' to field
+1574184816653	Convert local variable 'tmath' to field
+1574184824679	Convert local variable 'teng' to field
+1574184996597	Convert local variable 'bname' to field
+1574185002618	Convert local variable 'bkor' to field
+1574185009646	Convert local variable 'bmath' to field
+1574185016175	Convert local variable 'beng' to field
+1574185134488	Convert local variable 'chkbtn' to field
+1574318320124	Delete element
+1574325879429	Convert local variable 'pname' to field
+1574325883611	Convert local variable 'pkor' to field
+1574325886038	Convert local variable 'pmath' to field
+1574325889763	Convert local variable 'peng' to field
+1574326000438	Convert local variable 'showj' to field

@@ -1,0 +1,7 @@
+1574750024822	Delete element
+1574791756376	Convert local variable 'G' to field
+1574838661377	Convert local variable 'bmi' to field
+1574841974570	Extract method 'basePayment'
+1574841988363	Extract method 'outOfPayment'
+1574846182172	Convert local variable 'sum' to field
+1574855351283	Delete element

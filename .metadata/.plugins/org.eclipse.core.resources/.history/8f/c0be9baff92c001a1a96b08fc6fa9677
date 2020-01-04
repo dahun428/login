@@ -1,0 +1,17 @@
+package cloudstudying03;
+
+public class pratice05 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Squre05{
+	
+	int lenght;
+	String color;
+	
+	
+}

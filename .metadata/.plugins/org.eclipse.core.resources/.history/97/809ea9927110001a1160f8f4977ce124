@@ -1,0 +1,36 @@
+package cloudstudying;
+
+public class pratice18 {
+
+	double dollar ;
+	double dice;
+	double temp;
+	int N = (int) (6 * Math.random());
+	
+	public void dice() {
+		
+	
+		double dice = N + 1;
+		
+	}
+	  public void dollar() {
+		  
+		dollar = dice + dice + dice ;
+		  System.out.println(dollar);
+	
+	  }
+ 
+	
+	public static void main(String[] args) {
+		
+		pratice18 p18 = new pratice18();
+		p18.dice();
+		p18.dollar();
+ 
+		/*
+		 * double won = exchange(dollar); System.out.printf("È¹µæ±Ý¾× : $%.2f(%.0f¿ø)",
+		 * dollar, won);
+		 */
+	}
+
+}

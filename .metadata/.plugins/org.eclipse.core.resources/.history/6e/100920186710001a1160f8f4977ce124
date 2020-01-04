@@ -1,0 +1,24 @@
+package cloudstudying;
+
+public class pratice17 {
+
+	double gasolin = 8.68;
+	double CarA;
+	double Km = 182.736;
+	double fuelE;
+	
+	public void fuelE() {
+		fuelE = Km / gasolin;
+	
+	}
+	public void CarA() {
+		System.out.println("¿¬ºñ : " + fuelE);
+	}
+	
+	public static void main(String[] args) {
+	 
+		pratice17 p17 = new pratice17();
+		p17.CarA();
+	}
+
+}

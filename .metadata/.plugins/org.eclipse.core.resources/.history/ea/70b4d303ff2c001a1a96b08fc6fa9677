@@ -1,0 +1,36 @@
+package cloudstudying03;
+
+public class pratice06 {
+
+	public static void main(String[] args) {
+		circle01 c1 = new circle01();
+		c1.radius = 4;
+		c1.height = 5;
+		c1.circleinfo();
+	}
+
+}
+
+class circle01{
+	
+	double radius, height, volume, area;
+	final static double PI = Double.parseDouble(String.format("%.2f",Math.PI));
+	
+	public double getArea() {
+	
+		volume = 2*radius*radius*PI+2*radius*PI;
+		return volume;
+	}
+	public double getVolume() {
+	
+		area = height * getArea();
+		return area;
+	}
+	public void circleinfo() {
+		
+		System.out.printf("¿ø±âµÕÀÇ ºÎÇÇ : %.2f\n", getVolume());
+		System.out.printf("¿ø±âµÕÀÇ °Ñ³ÐÀÌ : %.2f", getArea());
+		
+	}
+
+}

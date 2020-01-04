@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;cloudstudying.Student&apos; to &apos;Student_a&apos;&#x0D;&#x0A;- Original project: &apos;cloudstudying&apos;&#x0D;&#x0A;- Original element: &apos;cloudstudying.Student&apos;&#x0D;&#x0A;- Renamed element: &apos;cloudstudying.Student_a&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Student&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;cloudstudying{pratice83.java[Student" matchStrategy="1" name="Student_a" qualified="false" references="true" similarDeclarations="false" stamp="1576236113910" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,19 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("己利钎");
+		System.out.println("------------");
+		System.out.println("寸脚狼 己利篮   : ");
+		System.out.println("惫绢 己利  :  ");
+		System.out.println("荐切 己利  :  ");
+		System.out.println("康绢 己利  :  ");
+		
+		
+		
+		
+	}
+
+}

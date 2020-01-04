@@ -1,0 +1,15 @@
+package cloudstudying;
+
+public class pratice30 {
+	
+	public static void main(String[] args) {
+ 
+		int n = 4;
+		while ( n > 0) {
+			System.out.println(n);
+			n--;
+		}
+		
+	}
+
+}

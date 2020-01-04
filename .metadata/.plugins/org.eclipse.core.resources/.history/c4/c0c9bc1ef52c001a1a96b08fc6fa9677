@@ -1,0 +1,25 @@
+package cloudstudying03;
+
+public class pratice02 {
+	Bicycle b1 = new Bicycle();
+	Bicycle b2 = new Bicycle();
+	
+	public static void main(String[] args) {
+//		System.out.printf("b1 -> {로드형 자전거, 7.25, 326000}",);
+//		System.out.printf("b1 -> {산악형 자전거, 10.68, 429000}",);
+	}
+
+}
+class Bicycle{
+	
+	String name;
+	double weight;
+	int price;
+	
+	public void move() {
+		System.out.println("지나갑니다.");
+	}
+	public void horn() {
+		System.out.println("따르릉");
+	}
+}

@@ -1,0 +1,12 @@
+package cloudstudying;
+
+public class pratice36 {
+
+	public static void main(String[] args) {
+ 
+		int[] array = {36,72,82,36};
+		System.out.println(array[0]);
+		
+	}
+
+}

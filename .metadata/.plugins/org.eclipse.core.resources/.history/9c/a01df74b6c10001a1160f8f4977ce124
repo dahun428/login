@@ -1,0 +1,23 @@
+package cloudstudying;
+
+public class pratice18 {
+
+	int N;
+	
+	public void dice() {
+
+
+	  N = (int) (6 * Math.random());
+		
+	}
+ 
+	
+	public static void main(String[] args) {
+		System.out.println("dice");
+		/*
+		 * double dollar = dice( ) + dice() + dice(); double won = exchange(dollar);
+		 * System.out.printf("È¹µæ±Ý¾× : $%.2f(%.0f¿ø)", dollar, won);
+		 */
+	}
+
+}

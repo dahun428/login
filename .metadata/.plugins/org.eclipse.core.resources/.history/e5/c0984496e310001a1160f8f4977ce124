@@ -1,0 +1,43 @@
+package cloudstudying;
+
+public class pratice27 {
+
+	  public static double calculate(double weight, double tall) {
+	    
+	     return weight / (tall * tall);
+	  }
+	  
+	  // bmi 지수를 입력받아, 비만 결과를 반환
+	  public static String result(double bmi) {
+	    String result = "";
+	    if(bmi > 30) {
+			System.out.println("결과 : 비만입니다.");
+		}
+		else if(bmi >= 25) {
+			System.out.println("결과 : 과체중입니다.");
+		}
+		else if(bmi >= 18.5) {
+			System.out.println("결과 : 정상입니다.");
+		}
+		else {
+			System.out.println("결과 : 저체중입니다.");
+		}
+
+ return result;
+	  }
+	  public static void main(String[] args) {
+		    // 변수 생성
+		    double w = 81.6;
+		    double t = 1.76;
+		    
+		    // BMI 계산
+		    double bmi = calculate(w, t);
+		    
+		    // 결과 출력
+		    System.out.printf("BMI: %.2f(%.1fkg, %.2fm)\n", bmi, w, t);
+		    System.out.printf("결과: %s입니다.\n", result(bmi));
+		 // 몸무게와 키를 입력받아, bmi 지수를 반환
+			  
+		  }
+
+	}

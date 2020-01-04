@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+	<form action="formexservlet" method="post">
+		<div><h3>이름 : <input type="text" name="username" value="이름을 입력해주세요"/></h3></div>
+		<div><h3>아이디 :<input type="text" name="userid" value="아이디를 입력해주세요"/></h3></div>
+		<div><h3>비밀번호 : <input type="password" name="userpw" /></h3></div>
+		<div><h3>취미</h3>	
+				<span>
+				요리<input type="checkbox" name="hobby" value="cook"/>
+				조깅 <input type="checkbox" name="hobby" value="jogging"/>
+				수영<input type="checkbox" name="hobby" value="swimming"/>		
+				기타<input type="checkbox" name="hobby" value="other"/>
+				</span>
+		</div>
+		<div><h3>주요과목</h3>
+				<span>
+				국어<input type="radio" name="major" value="kor"/>
+				영어<input type="radio" name="major" value="eng"/>
+				수학<input type="radio" name="major" value="math"/>
+				과학<input type="radio" name="major" value="science"/>
+				</span>
+		</div>
+		<div><h3>선택수업</h3>
+		<select name="protocol" id="prtsel">
+			<option value="http">HTTP</option>
+			<option value="ftp" selected ="selected">FTP</option>
+			<option value="smtp">SMTP</option>
+			<option value="pop">POP</option>
+		</select>
+		</div>
+	<div><input type="submit" value="전송"/><input type="reset" value="초기화" /></div>
+	</form>
+</div>
+</body>
+</html>

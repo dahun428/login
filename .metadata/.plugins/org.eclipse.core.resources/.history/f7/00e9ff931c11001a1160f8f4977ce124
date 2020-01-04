@@ -1,0 +1,25 @@
+package cloudstudying;
+
+public class pratice42 {
+
+	
+	
+	public static void main(String[] args) {
+ 
+		int n = 6;
+		
+		String [] week = {"월","화","수","목","금","토","일"};
+		int [] user = {581,512,527,495,423,141,236};
+		
+		for(int i = 0; i <= n ; i++) {
+			System.out.printf("%s", week[i]);
+			System.out.printf("%d", user[i]);
+			
+		}
+				
+		
+		
+		
+	}
+
+}

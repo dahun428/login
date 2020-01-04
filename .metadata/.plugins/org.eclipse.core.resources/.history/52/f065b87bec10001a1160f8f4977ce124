@@ -1,0 +1,51 @@
+package cloudstudying;
+
+public class pratice28 {
+
+	double workingHour;
+	double basePayment;
+	double Payment;
+	double b = 8;
+	double w = 50;
+	double a;
+
+	
+	public double workingHour(double w) {
+	
+		
+		if (w > 40) {
+			a = w - 40; 
+			return a;
+		}else {
+			return w;
+		} 
+		
+	}
+	public  double basePayment(double b) {
+		b = 8.00;
+		return b ;
+	}
+	public  double Payment() {
+		return (w * b) + (a * 1.5 * b);
+	}
+	public void run() {
+		System.out.println(w);
+		System.out.println(b);
+		System.out.println(a);
+	 	System.out.println(Payment());
+	}
+	
+	public static void main(String[] args) {
+		
+  	pratice28 p28 = new pratice28();
+  	p28.run();
+		
+		/*
+		 * System.out.println("총 근무 시간을 입력하세요 : ");
+		 * System.out.println("기본 시급을 입력하세요 : ");
+		 * System.out.println("주당 근무 40 시간 기준 급여 : " + "초과분 급여 : ");
+		 * System.out.println("해당 인원의 주당 근무 시간이 60시간을 초과하였습니다.");
+		 */			
+	}
+
+}

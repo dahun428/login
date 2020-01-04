@@ -1,0 +1,11 @@
+1575015555284	Move compilation unit
+1575016404742	Delete elements
+1575025956699	Convert local variable 'Daysc' to field
+1575026093135	Convert local variable 'RTsc' to field
+1575026095582	Convert local variable 'Osc' to field
+1575030480798	Rename local variable 'allba'
+1575031172413	Extract method 'getRegularTimeMoney'
+1575031192822	Extract method 'getOverTimeMoney'
+1575032323487	Rename type 'Allba2'
+1575032401689	Rename type 'Allba2'
+1575032422557	Rename local variable 'allba2'

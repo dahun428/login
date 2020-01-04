@@ -1,0 +1,28 @@
+package cloudstudying;
+
+
+public class pratice16 {
+
+	double karoly = 0.02;
+	int step;
+	double usekaroly;
+
+	public int step(int a) {
+		return a;
+	}
+	public void usekaroly() {
+		usekaroly = step * karoly;
+	}
+	public void run() { 
+		System.out.printf("소모된 칼로리 : %d", usekaroly);
+			
+	}
+ 	
+	public static void main(String[] args) {
+		
+		pratice16 p16 = new pratice16();
+		p16.step(5000);
+		p16.run();
+	}
+
+}

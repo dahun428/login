@@ -1,0 +1,17 @@
+package cloudstudying03;
+
+public class pratice06 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class circle01{
+	
+	double radius;
+	double height;
+	
+	
+}

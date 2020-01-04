@@ -1,0 +1,13 @@
+package cloudstudying;
+
+public class pratice37 {
+
+	public static void main(String[] args) {
+ 
+		String[] w = {"월" , "화", "수", "목", "금"};
+		int[] ame = {52, 50, 55, 42, 38};
+		
+		System.out.printf("%s",w[0]);
+	}
+
+}

@@ -1,0 +1,85 @@
+package com.javalec.ex4;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import javafx.scene.control.Alert;
+
+/**
+ * Servlet implementation class login
+ */
+//@WebServlet("/login")
+public class login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public login() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html; charset=EUC-KR");
+		String userid = request.getParameter("id").toString();
+		String userpw = request.getParameter("pw").toString();
+		
+		String initid = getInitParameter("id").toString();
+		String initpw = getInitParameter("pw").toString();
+		
+		PrintWriter writer = response.getWriter();
+		PrintWriter out = response.getWriter();
+		
+		writer.println("<html><head></head><body>");
+//		writer.println("아이디 : " + userid);
+//		writer.println("비밀번호 : " + userpw);
+//		writer.println(initid);
+//		writer.println(initpw);
+//		
+		
+		if ( userid == initid) {
+			writer.println("true");
+		}else {
+			writer.println("false");
+		}
+//		if(userid != initid) {
+//			out.println("<script>alert('아이디가 틀렸습니다.'); location.href='http://localhost:8181/ex4/LoginSystem.jsp';</script>");
+//		}else {
+//			writer.println("아이디 : " + userid);
+//			writer.println("비밀번호 : " + userpw);
+//		}
+//		}else if(userpw == initpw){
+//			out.println("<script>alert('비밀번호가 틀렸습니다.'); location.href = 'http://localhost:8181/ex4/LoginSystem.jsp'</script>");
+//			
+//		}else {
+//			writer.println("아이디 : " + userid);
+//			writer.println("비밀번호 : " + userpw);
+//			out.println("<script>alert('안녕하세요'+ userid +'님');</script>");
+//			out.flush();
+//		}
+		
+		writer.println("</body></html>");
+		writer.close();
+		
+	}
+
+}

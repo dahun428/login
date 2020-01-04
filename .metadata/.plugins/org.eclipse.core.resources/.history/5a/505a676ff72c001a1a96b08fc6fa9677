@@ -1,0 +1,16 @@
+package cloudstudying03;
+
+public class pratice04 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+class bread{
+	
+	String name;
+	int price;
+	
+	
+}

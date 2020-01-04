@@ -1,0 +1,8 @@
+1573906263952	Extract local variable 'valueOfSupply'
+1573906279327	Extract local variable 'vAT'
+1573906308387	Extract local variable 'expense'
+1573906321524	Extract local variable 'total'
+1573906336216	Extract local variable 'income'
+1573906347750	Extract local variable 'dividend1'
+1573906360833	Extract local variable 'dividend2'
+1573906369012	Extract local variable 'dividend3'

@@ -1,0 +1,24 @@
+package cloudstudying;
+
+public class pratice37 {
+
+	public static void main(String[] args) {
+ 
+		String[] w = {"¿ù" , "È­", "¼ö", "¸ñ", "±Ý"};
+		int[] ame = {52, 50, 55, 42, 38};
+		
+		for(int i = 0; i < 5; i++) {
+		
+			System.out.printf("%s : %d ÀÜ \n",w[i],ame[i]);
+			
+		}
+		System.out.printf("%s : %d ÀÜ \n",w[0],ame[0]);
+		System.out.printf("%s : %d ÀÜ\n",w[1],ame[1]);
+		System.out.printf("%s : %d ÀÜ\n",w[2],ame[2]);
+		System.out.printf("%s : %d ÀÜ\n",w[3],ame[3]);
+		System.out.printf("%s : %d ÀÜ",w[4],ame[4]);
+
+
+	}
+
+}

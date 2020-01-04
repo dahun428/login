@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+	<div>이름 : <input type="text" name="username" value="이름을 입력해주세요"/></div>
+	<div>아이디 :<input type="password" name="userid" value="아이디를 입력해주세요"/></div>
+	<div>비밀번호 : <input type="text" name="userpw" /></div>
+	<div>취미
+		<span>
+		요리<input type="checkbox" name="cook"/>
+		조깅 <input type="checkbox" name="jogging"/>		
+		
+		
+		</span>
+		
+		수영
+		취침
+	
+	
+	</div>
+</div>
+</body>
+</html>

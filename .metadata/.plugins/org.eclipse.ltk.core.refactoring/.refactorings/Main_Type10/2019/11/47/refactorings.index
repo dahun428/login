@@ -1,0 +1,12 @@
+1574274800228	Delete element
+1574277329511	Convert local variable 'sc' to field
+1574277333716	Convert local variable 'n' to field
+1574277337872	Convert local variable 'sc2' to field
+1574277341665	Convert local variable 'm' to field
+1574277347869	Encapsulate field 'm'
+1574277353747	Encapsulate field 'sc2'
+1574277359171	Encapsulate field 'n'
+1574277876234	Copy compilation unit
+1574316991352	Convert local variable 'sc2' to field
+1574316994803	Convert local variable 'sc' to field
+1574317035599	Delete element

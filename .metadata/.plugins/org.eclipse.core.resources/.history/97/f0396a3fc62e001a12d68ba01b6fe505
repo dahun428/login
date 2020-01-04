@@ -1,0 +1,29 @@
+package com.javalc.AlbaApp;
+
+public class AlbaAppCon {
+
+	public static void main(String[] args) {
+
+		
+		
+		
+	}
+
+}
+
+
+class AlbaCal{
+	
+	double Time_Money, Time_noon, Time_night;
+	
+	
+	
+	public int Total() {
+		
+		return (int) ((Time_Money * Time_noon) + (Time_Money * 1.5 * Time_night));
+	}
+	
+	
+	
+	
+}

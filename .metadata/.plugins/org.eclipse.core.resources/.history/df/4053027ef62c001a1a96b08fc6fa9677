@@ -1,0 +1,18 @@
+package cloudstudying03;
+
+public class pratice03 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+class Squre{
+	
+	int lenght;
+	public area(int lenght) {
+		this.lenght = lenght;
+		return lenght * lenght;
+	}
+	
+}
