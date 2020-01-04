@@ -1,2 +1,3 @@
 1578124045125	Extract method 'getNoonMoney'
 1578124063191	Extract method 'getNightMoney'
+1578137520109	Move 'AlbaApp_endPage.jsp' to 'WebContent'

@@ -13,3 +13,5 @@ C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core
 \AlbaApp\src
 C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2372455924.index
 \AlbaProject\src
+C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\995016066.index
+\AlbaApp\src
