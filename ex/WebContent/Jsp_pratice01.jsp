@@ -19,6 +19,33 @@ getRequestURL() : 요청 URL을 얻습니다.
 getRequestURI() :  요청 URI를 얻습니다.
 getQuerySting() : 쿼리스트링을 얻습니다.
 
+<%
+
+out.println("서버 : " + request.getServerName() + "<br />");
+out.println("포트 번호 : " + request.getServerPort() + "<br />");
+out.println("요청방식  : " + request.getMethod() + "<br />");
+out.println("프로토콜 : " + request.getProtocol()+ "<br />");
+out.println("URL : " + request.getRequestURL() + "<br />");
+out.println("URI : " + request.getRequestURI() + "<br />");
+
+%>
+
+Jsp페이지를 제작하는 목적이 데이터를 값을 전송하기 위해서이므로, parameter 관련 메소드는 중요합니다.
+
+getParameter(String name) : name에 해당하는 파라미터 값을 구함
+getParameterNames(); : 모든 파라미터 이름을 구함
+getParameterValues(String name) : name에 해당하는 파라미터 값을 구함.
+
 </pre>
+<pre>
+getCharacterEncording() : 응답할때 문자의 인코딩 형태를 구합니다.
+addCookie(Cookie) : 쿠키를 지정합니다.
+sendRedirect(URL) : 지정한 url로 이동합니다.
+
+
+
+
+</pre>
+
 </body>
 </html>
