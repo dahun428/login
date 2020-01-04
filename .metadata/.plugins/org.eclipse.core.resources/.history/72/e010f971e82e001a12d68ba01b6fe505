@@ -1,0 +1,65 @@
+package com.javalc.AlbaApp;
+
+public class AlbaAppCon {
+
+	public static void main(String[] args) {
+
+		
+		
+		
+	}
+
+}
+
+
+class AlbaCal{
+	
+	double Time_Money;
+	double [] Time_noon;
+	double [] Time_night;
+	double result;
+	
+	public double Total() {
+		
+		return getNoonMoney() + getNightMoney();
+	}
+
+	public double getNightMoney() {
+		
+		for(int i = 0; i < Time_night.length; i++) {
+				
+			result = Time_Money * Time_night[i];
+		}
+		
+		return result* 1.5;
+	}
+
+	public double getNoonMoney() {
+		for(int i = 0; i < Time_noon.length; i++) {
+			
+			result = Time_Money * Time_noon[i];
+		}
+		
+		return result;
+	}
+	
+	
+	
+//	double[]noon1 = new double[noon.length];
+//	for(int i = 0; i < noon.length; i++) {
+//		noon1[i] = Double.parseDouble(noon[i]);
+//	}
+//	
+	//String noon 값 double로 변환
+//	double[] noon1 = new double[noon.length];
+//	for(int i = 0; i<noon.length; i++) {
+//		noon1[i] = Double.parseDouble(noon[i]);
+//	}
+//
+//	//String night 값 double 로 변환
+//	double[] night1 = new double[night.length];
+//	for(int i = 0; i < night.length; i++) {
+//		night1[i] = Double.parseDouble(night[i]);
+//	}
+	
+}

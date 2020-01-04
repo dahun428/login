@@ -24,7 +24,7 @@
         <li><span>시급 : </span><input type="text" name="Time_Money"></li>
         <li><span>오전/오후타임(07:00~22:00)</span>
             <select name="Time_noon" id="Time_noon">
-                <option value="0">---</option>
+                <option value=null>---</option>
                 <option value="3">3시간</option>
                 <option value="3.5">3시간 30분</option>
                 <option value="4.5">4시간</option>
@@ -38,7 +38,7 @@
         </li>
         <li><span>야간타임(22:00~07:00)</span>
             <select name="Time_night" id="Time_night">
-                <option value="0">---</option>
+                <option value=null>---</option>
                 <option value="3">3시간</option>
                 <option value="3.5">3시간 30분</option>
                 <option value="4">4시간</option>
