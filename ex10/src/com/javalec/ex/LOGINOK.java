@@ -3,7 +3,7 @@ package com.javalec.ex;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
- 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
  
@@ -52,8 +52,8 @@ public class LOGINOK extends HttpServlet {
 		String loginpw = request.getParameter("user_pw");
 	
 		Connection conn = null;
-//		PreparedStatement pstmt = null;
-		Statement stmt = null;
+		PreparedStatement pstmt = null;
+//		Statement stmt = null;
 		ResultSet resultSet =null;
 		
 
@@ -63,7 +63,7 @@ public class LOGINOK extends HttpServlet {
 		String url = server.url("basepratice");
 		String uid = server.uid();
 		String upw = server.upw();
-		String query = "SELECT * FROM loginsystem";
+		String query = "SELECT userpw FROM loginsystem WHERE userid = ?";
 //		 "select * from joinDB where id='" + id + "'";
 
 		String page ="";
@@ -71,47 +71,61 @@ public class LOGINOK extends HttpServlet {
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, uid, upw);
-//			pstmt = conn.prepareStatement(query);
-//			pstmt = setString(1,id);
-			stmt = conn.createStatement();
-			resultSet = stmt.executeQuery(query); 
-//			resultSet = stmt.executeQuery();
-			
-			while(resultSet.next()) {
-				String userid = resultSet.getString("userid");
-				String userpw = resultSet.getString("userpw");
-				
-				if((userid.equals(loginid)) && (userpw.equals(loginpw))) {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, loginid);
+//			stmt = conn.createStatement();
+//			resultSet = stmt.executeQuery(query); 
+			resultSet = pstmt.executeQuery();
+			if(resultSet.next()) {
+				if(resultSet.getString(1).equals(loginpw)) {
 					page = "LOGINRESULT.jsp";
-					session.setAttribute("userid", userid);
+					session.setAttribute("loginid", loginid);
 					response.sendRedirect(page);
-					
-//					HttpSession session = request.getSession();
-//				    String username = (String)request.getAttribute("un");
-//				    session.setAttribute("UserName", username);
-					
-					
-//					System.out.println("로그인되었습니다.");
-					System.out.println(userid);
-					System.out.println(loginid);
-//					break;
 				}else {
 					page= "LOGINERROR.jsp";
 					response.sendRedirect(page);
-//					System.out.println("없는 아이디입니다.");
-					System.out.println(userid);
-					System.out.println(loginid);
-//					break;
 				}
-			
+				
+				
 			}
+			
+			
+			
+//			while(resultSet.next()) {
+//				String userid = resultSet.getString("userid");
+//				String userpw = resultSet.getString("userpw");
+//				
+//				if((userid.equals(loginid)) && (userpw.equals(loginpw))) {
+//					page = "LOGINRESULT.jsp";
+//					session.setAttribute("userid", userid);
+//					response.sendRedirect(page);
+//					
+////					HttpSession session = request.getSession();
+////				    String username = (String)request.getAttribute("un");
+////				    session.setAttribute("UserName", username);
+//					
+//					
+////					System.out.println("로그인되었습니다.");
+//					System.out.println(userid);
+//					System.out.println(loginid);
+////					break;
+//				}else {
+//					page= "LOGINERROR.jsp";
+//					response.sendRedirect(page);
+////					System.out.println("없는 아이디입니다.");
+//					System.out.println(userid);
+//					System.out.println(loginid);
+////					break;
+//				}
+			
+			
 					
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
-			if(stmt !=null) {
+			if(pstmt !=null) {
 				try {
-					stmt.close();
+					pstmt.close();
 				}catch(Exception e) {
 					e.printStackTrace();
 				}

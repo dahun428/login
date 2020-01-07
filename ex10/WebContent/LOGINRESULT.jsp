@@ -15,7 +15,7 @@ String id, pw, sName, sValue;
 %>
 <%
 
-id = (String) session.getAttribute("userid");
+id = (String) session.getAttribute("loginid");
 Enumeration<String> enumeration = session.getAttributeNames();
 while(enumeration.hasMoreElements()){
 	sName = enumeration.nextElement().toString();
