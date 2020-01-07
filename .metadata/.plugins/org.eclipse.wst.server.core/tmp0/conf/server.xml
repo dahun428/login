@@ -60,13 +60,13 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8181" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8181" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
                port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443" />
+               redirectPort="8443"  URIEncoding="UTF-8" />
     -->
     <!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443
          This connector uses the NIO implementation. The default
@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\AlbaApp" path="/AlbaApp" reloadable="true" source="org.eclipse.jst.jee.server:AlbaApp"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex" path="/ex" reloadable="true" source="org.eclipse.jst.jee.server:ex"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex1" path="/ex1" reloadable="true" source="org.eclipse.jst.jee.server:ex1"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex2" path="/ex2" reloadable="true" source="org.eclipse.jst.jee.server:ex2"/></Host>
+      <Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\AlbaApp" path="/AlbaApp" reloadable="true" source="org.eclipse.jst.jee.server:AlbaApp"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex" path="/ex" reloadable="true" source="org.eclipse.jst.jee.server:ex"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex1" path="/ex1" reloadable="true" source="org.eclipse.jst.jee.server:ex1"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex2" path="/ex2" reloadable="true" source="org.eclipse.jst.jee.server:ex2"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex3" path="/ex3" reloadable="true" source="org.eclipse.jst.jee.server:ex3"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex4" path="/ex4" reloadable="true" source="org.eclipse.jst.jee.server:ex4"/><Context docBase="C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ex10" path="/ex10" reloadable="true" source="org.eclipse.jst.jee.server:ex10"/></Host>
     </Engine>
   </Service>
 </Server>

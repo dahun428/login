@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>JDBC</h1>
+<h2>JDBC 살펴보기</h2>
+<pre>JAVA 프로그램에서 SQL문을 실행하여 데이터를 관리하기위한 JAVA API 입니다.
+JDBC의 특징은 다양한 데이터베이스에 대해서 별도의 프로그램을 만들 필요 없이, 해당 데이터베이스의JDBC를 이용하면
+하나의 프로그램으로 데이터 베이스를 관리 할 수 있습니다.
+</pre>
+<h2>JDBC 드라이버 로드</h2>
+<pre>class.forName("com.mysql.jdbc.Driver")</pre>
+<h2>데이터베이스 연걸</h2>
+<pre>DriverManager.getConnection (JDBC URL 계정아이디, 비밀번호);</pre>
+<h2>SQL문 실행</h2>
+<pre>connection.createStatement();
+Statement 객체를 통해 SQL문이 실행됩니다.</pre>
+<h2>데이터베이스 연결해제</h2>
+<pre>statement.executeQuery(), statement.executeUpdate()
+SQL문의 결과값을 Result객체로 받습니다.</pre>
+
+<h2>Statement 객체 살펴보기</h2>
+<ol>
+	<li>executeQuery()<pre>
+	SQL문 실행후 여러 개의 결과 값이 생기는 경우 사용합니다.
+	</pre></li>
+	
+	<li>executeUpdate()
+	<pre>
+	SQL 문 실행후 테이블의 내용만 변경되는 경우 사용합니다.
+	EX) insert, delete, update
+	</pre></li>
+</ol>
+<h2>exeuteQuery() 실행 후 반환되는 레코드셋</h2>
+<h2>ResultSet</h2>
+<pre>next() : 다음 레코드로 이동
+previous() : 이전 레코드로 이동
+fisrt():처음으로 이동
+last():마지막으로 이동
+get메소드 (getString,getint)</pre>
+</body>
+</html>

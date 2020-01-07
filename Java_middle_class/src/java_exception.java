@@ -35,7 +35,7 @@ class calculator{
 	public void divide() {
 		
 		if(right == 0) {
-			throw new ArithmeticException("0으로 나눌 수 없습니다.");
+			throw new DiviedException("0으로 나눌 수 없습니다.");
 		}
 		
 		try {
@@ -47,6 +47,15 @@ class calculator{
 			e.printStackTrace();
 		}
 		
+	}
+	
+}
+class DiviedException extends RuntimeException{
+	DiviedException(){
+		super();	
+	}
+	DiviedException(String message) {
+		super(message);
 	}
 	
 }
