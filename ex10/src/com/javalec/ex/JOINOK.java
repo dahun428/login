@@ -79,7 +79,7 @@ public class JOINOK extends HttpServlet {
 			pstmt.setString(4, phoneNumber);
 			pstmt.setString(5, gender);
 			pstmt.executeUpdate();
-			
+			response.sendRedirect("JOINRESULT.jsp");
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}catch(ClassNotFoundException e) {

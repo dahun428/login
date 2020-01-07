@@ -1,5 +1,7 @@
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="com.javalec.ex.LOGINOK" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +9,38 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-
-request.setCharacterEncoding("EUC-KR");
-
+<%!
+String id, pw, sName, sValue;
 
 %>
+<%
+
+id = (String) session.getAttribute("userid");
+Enumeration<String> enumeration = session.getAttributeNames();
+while(enumeration.hasMoreElements()){
+	sName = enumeration.nextElement().toString();
+	sValue = session.getAttribute(sName).toString();
+	if(sValue.equals(id)){
+		out.println(sValue + "´Ô ¾È³çÇÏ¼¼¿ä"+"<br />");
+	}
+}
+
+//id = (String) request.getAttributeNames() request.getAttribute("userid");
+//Enumeration<String> enumeration = session.getAttributeNames();
+//while(enumeration.hasMoreElements()){
+	//sName = enumeration.nextElement().toString();
+	//sValue = session.getAttribute(sName).toString();
+	
+	//if(sValue.equals(id)){
+	//	out.println(sValue + "´Ô ¾È³çÇÏ¼¼¿ä"+"<br />");
+//	}
+//}
+
+System.out.println(id);
+System.out.println(sName);
+System.out.println(sValue);
+%>
+·Î±×ÀÎ¿Ï·á<br />
+
 </body>
 </html>
