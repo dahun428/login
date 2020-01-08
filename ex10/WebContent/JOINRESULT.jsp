@@ -14,6 +14,7 @@
 
 <h2>회원가입 완료</h2>
 
+
 <a href="LOGIN.html">로그인페이지로 이동</a>
 <a href="JOIN.html">회원가입 페이지로 이동</a>
 </body>

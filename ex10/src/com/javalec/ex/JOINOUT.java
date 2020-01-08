@@ -78,7 +78,7 @@ public class JOINOUT extends HttpServlet {
 				if(rs.getString(1).equals(joinoutpw)) {
 					pstmtDelete.setString(1, id);
 					pstmtDelete.executeUpdate();
-					response.sendRedirect(location);
+					response.sendRedirect("JOINOUTRESULT.jsp");
 					System.out.println("삭제되었습니다.");
 				}else {
 					System.out.println("삭제실패!");
