@@ -25,3 +25,5 @@ C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core
 \AlbaApp\src
 C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\807998193.index
 \Pratice_Web01\src
+C:\Users\dahun.000\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\277016386.index
+\ex10\src
