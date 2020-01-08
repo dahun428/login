@@ -29,5 +29,7 @@ while(enumeration.hasMoreElements()){
 %>
 로그인완료<br />
 <a href="MODIFY.jsp">회원정보 수정하기</a>
+<a href="LOGOUT.jsp">로그아웃하기</a>
+<a href="JOINOUT.jsp">회원탈퇴하기</a>
 </body>
 </html>
