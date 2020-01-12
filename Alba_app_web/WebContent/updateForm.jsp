@@ -1,3 +1,7 @@
+<%@page import="com.javalec.system.MyDTO"%>
+<%@page import="com.javalec.system.MyDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +9,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Alba_Caculator</h1>
-<form action="insert.jsp" method="post">
-<div>알바 이름 : <input type="text" name="name"/></div>
+<%!
+String name, time, place, memo;
+int dateY, dateM, dateD, pay, hour;
+double min, wage, night_wage;
+
+
+
+%>
+<%
+int _id = Integer.parseInt(request.getParameter("_id"));
+MyDAO manager = new MyDAO();
+MyDTO data = manager.getData(_id);
+session.setAttribute("_id", _id);
+
+%>
+
+
+<form action="update.jsp" method="post">
+<div>알바 이름 : <input type="text" name="name" value="<%=data.getName()%>"/></div>
 <div>알바 일자 : 
 <select name="dateY">
 <option value="2019">2019</option>
@@ -61,7 +81,7 @@
 <option value="28">31</option>
 </select>일
 </div>
-<div>알바 시급 : <input type="text" name="pay"/></div>
+<div>알바 시급 : <input type="text" name="pay" value="<%=data.getPay()%>"/></div>
 <div>근무 시간 :
 <span>
 <select name="time">
@@ -93,15 +113,10 @@
 
 </span>
 </div>
-<div>알바 장소 : <input type="text" name="place"/></div>
+<div>알바 장소 : <input type="text" name="place" value="<%=data.getPlace()%>"/></div>
 <div>메모 : </div>
-<div> <textarea name="memo" id="" cols="30" rows="10"></textarea></div>
-<input type="submit" value="확인" /><input type="reset" value="취소" onclick="location.href='list.jsp'"/>
+<div> <textarea name="memo" cols="30" rows="10"><%=data.getMemo()%></textarea></div>
+<input type="submit" value="확인" /><input type="reset" value="취소" />
 </form>
-<div>
-<input type="button" value="리스트보기" onclick="location.href='list.jsp'"/>
-</div>
-
-
 </body>
 </html>
