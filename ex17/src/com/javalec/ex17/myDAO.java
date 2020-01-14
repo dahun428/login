@@ -1,23 +1,34 @@
 package com.javalec.ex17;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class myDAO {
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
-	private String driver = "com.mysql.cj.jdbc.Driver";
-	private String url = "jdbc:mysql://localhost:3306/basepratice?serverTimezone=UTC";
-	private String uid = "root";
-	private String upw = "d1860429";
+import javax.naming.Context;
+public class myDAO {
+//
+//	private String driver = "com.mysql.cj.jdbc.Driver";
+//	private String url = "jdbc:mysql://localhost:3306/basepratice?serverTimezone=UTC";
+//	private String uid = "root";
+//	private String upw = "d1860429";
+	private DataSource dataSource;
 	private Connection con = null;
 	private PreparedStatement pstmt = null;
 	//jsp와 DB가 연결되도록 하는 driver를 연결
 	public myDAO() {
+//		try {
+//			Class.forName(driver);
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+		
 		try {
-			Class.forName(driver);
+			Context context = new InitialContext();
+			dataSource = (DataSource)context.lookup("java:comp/env/jdbc/mysql");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -31,7 +42,8 @@ public class myDAO {
 		
 		try {
 			
-			con = DriverManager.getConnection(url, uid, upw);
+//			con = DriverManager.getConnection(url, uid, upw);
+			con = dataSource.getConnection();
 			pstmt = con.prepareStatement(query);
 		//setString 인자로 data.get~ (DTO에서 만든 셋팅 값 getName return name) 
 		//pstmt.setString(1, name) 과 같다.
@@ -72,7 +84,7 @@ public class myDAO {
 		String query = "SELECT * FROM members"; 
 		
 		try {
-			con = DriverManager.getConnection(url, uid, upw);
+			con = dataSource.getConnection();
 			pstmt = con.prepareStatement(query);
 			rs = pstmt.executeQuery();
 	//ResultSet next를 통해서 모두다 검색하고, 그 검색 값을 data로 받고 그 리스트를 arraylist 에 포함시킨다.		
@@ -119,7 +131,7 @@ public class myDAO {
 	//이때, ResultSet을 통해서 정보를 가져오는 것은 동일하지만, query에 신경을써야한다.	
 		String query = "SELECT * FROM members WHERE id = ?";
 		try {
-			con = DriverManager.getConnection(url, uid, upw);
+			con = dataSource.getConnection();
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, id);
 			
@@ -167,7 +179,7 @@ public class myDAO {
 		String query = "UPDATE members SET name = ?, pw = ?, phone1 = ?, phone2= ?, phone3= ?, gender= ? WHERE id = ?";
 		try {
 			
-			con = DriverManager.getConnection(url, uid, upw);
+			con = dataSource.getConnection();
 			pstmt = con.prepareStatement(query);
 			
 			pstmt.setString(1, data.getName());
@@ -197,7 +209,7 @@ public class myDAO {
 		String query = "DELETE FROM members WHERE id = ?";
 		try {
 			
-			con = DriverManager.getConnection(url,uid,upw);
+			con = dataSource.getConnection();
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
