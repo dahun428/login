@@ -16,6 +16,8 @@ public class BDao {
 
 	private DataSource dataSource;
 	
+	private static BDao instance = new BDao();
+	
 	public BDao() {
 		try {
 			Context context = new InitialContext();
@@ -24,6 +26,9 @@ public class BDao {
 			e.printStackTrace();
 		}
 		
+	}
+	public static BDao getInstance() {
+		return instance;
 	}
 	
 	public void write(String bName, String bTitle, String bContent, Timestamp bDate) {
