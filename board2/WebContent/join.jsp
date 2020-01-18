@@ -44,7 +44,7 @@
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top:20px;">
 			
-				<form action="delete.do" method="post" name="join_form">
+				<form action="join.do" method="post" name="join_form">
 					<h3 style="text-align:center;">회원가입 화면</h3>
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20"/>

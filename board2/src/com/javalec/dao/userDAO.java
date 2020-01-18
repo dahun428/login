@@ -193,6 +193,41 @@ public class userDAO {
 		
 		return dto;
 	}
+	public void update(userDTO dto, String strID) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		String query = "UPDATE user SET userEmail = ?, userName= ? WHERE userID = ?";
+		
+		try {
+			
+			con = dataSource.getConnection();
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, dto.getUserEmail());
+			pstmt.setString(2, dto.getUserName());
+			pstmt.setString(3, strID);
+			pstmt.executeUpdate();
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			
+			try {
+				if(pstmt != null)pstmt.close();
+				if(con != null)con.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		
+		
+		
+	}
+	
 	public void delete(String userID) {
 		
 		Connection con = null;
@@ -205,7 +240,7 @@ public class userDAO {
 			con = dataSource.getConnection();
 			pstmt = con.prepareStatement(query);
 			pstmt.setString(1, userID);
-			pstmt.executeQuery();
+			pstmt.executeUpdate();
 			
 		}catch(Exception e) {
 			e.printStackTrace();

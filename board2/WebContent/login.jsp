@@ -42,6 +42,7 @@
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top:20px;">
 			
+			
 				<form action="login.do" method="post">
 					<h3 style="text-align:center;">로그인화면</h3>
 					<div class="form-group">
@@ -55,12 +56,9 @@
 				
 				
 				<div class="btn-group btn-group-justified" role="group" aria-label ="..." style="padding-top:2px;">
-				<div class="btn-group" role="group" onclick="location.href='join.jsp'">
-					<button type="button" class="btn btn-primary">회원가입</button>
-				</div>
-				<div class="btn-group" role="group">
-					<button type="button" class="btn btn-primary" onclick="location.href='joinout.jsp'">회원탈퇴</button>
-				</div>
+					<div class="btn-group" role="group" onclick="location.href='join.jsp'">
+						<button type="button" class="btn btn-primary">회원가입</button>
+					</div>
 				</div>
 				
 				

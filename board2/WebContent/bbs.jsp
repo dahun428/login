@@ -55,6 +55,8 @@ if(session.getAttribute("userID") != null){
 					<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="logoutAction.jsp">로그아웃</a></li>
+						<li><a href="update.jsp">회원정보수정</a></li>
+						<li><a href="joinOutAction.jsp">회원탈퇴</a></li>
 					</ul>
 				</li>
 			</ul>

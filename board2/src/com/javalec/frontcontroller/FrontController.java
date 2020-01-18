@@ -13,6 +13,8 @@ import com.javalec.command.BCommand;
 import com.javalec.command.BjoinCommand;
 import com.javalec.command.BjoinOutCommand;
 import com.javalec.command.BloginCommand;
+import com.javalec.command.BupdateCommand;
+import com.javalec.command.BwriteCommand;
 /**
  * Servlet implementation class FrontController
  */
@@ -65,7 +67,15 @@ public class FrontController extends HttpServlet {
 		}else if(com.equals("/delete.do")) {
 			command = new BjoinOutCommand();
 			command.execute(request, response);
-			viewPage = "main.jsp";
+			viewPage = "deleteCheck.jsp";
+		}else if(com.equals("/update.do")) {
+			command = new BupdateCommand();
+			command.execute(request, response);
+			viewPage = "updateCheck.jsp";
+		}else if(com.equals("/write.do")) {
+			command = new BwriteCommand();
+			command.execute(request, response);
+			viewPage = "bbs.jsp";
 		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher(viewPage);
