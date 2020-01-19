@@ -10,9 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.command.BCommand;
+import com.javalec.command.BcontentCommand;
+import com.javalec.command.BdeleteCommand;
 import com.javalec.command.BjoinCommand;
 import com.javalec.command.BjoinOutCommand;
+import com.javalec.command.BlistCommand;
 import com.javalec.command.BloginCommand;
+import com.javalec.command.BmodifyCommand;
 import com.javalec.command.BupdateCommand;
 import com.javalec.command.BwriteCommand;
 /**
@@ -75,7 +79,23 @@ public class FrontController extends HttpServlet {
 		}else if(com.equals("/write.do")) {
 			command = new BwriteCommand();
 			command.execute(request, response);
+			viewPage = "list.do";
+		}else if(com.equals("/list.do")) {
+			command = new BlistCommand();
+			command.execute(request, response);
 			viewPage = "bbs.jsp";
+		}else if(com.equals("/view.do")) {
+			command = new BcontentCommand();
+			command.execute(request, response);
+			viewPage = "view.jsp";
+		}else if(com.equals("/bbsModify.do")) {
+			command = new BmodifyCommand();
+			command.execute(request, response);
+			viewPage = "/view.do";
+		}else if(com.equals("/bbsDelete.do")) {
+			command = new BdeleteCommand();
+			command.execute(request, response);
+			viewPage = "/list.do";
 		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher(viewPage);

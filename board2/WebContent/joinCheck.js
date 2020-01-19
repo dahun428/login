@@ -49,4 +49,18 @@ function  infoConfirm(){
 	}
 	frm.submit();	
 }
-
+function writeFrm(){
+	
+	let frm = document.w_frm;
+	if(frm.bbsTitle.value.length == 0){
+		alert('글 제목을 입력해주세요');
+		frm.w_frm.bbsTitle.focus();
+		return;
+	}
+	if(frm.bbsContent.value.length == 0){
+		alert('글 내용을 입력해주세요');
+		frm.w_frm.bbsContent.focus();
+		return;
+	}
+	frm.submit();
+}

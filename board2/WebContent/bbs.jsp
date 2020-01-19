@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.javalec.dao.bbsDAO"%>
 <%@taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core" %>  
+
 <%
 
 String userID = null;
 if(session.getAttribute("userID") != null){
 	userID = (String) session.getAttribute("userID");}
-
+bbsDAO dao = new bbsDAO();
 %>
 <!DOCTYPE html>
 <html>
@@ -15,6 +17,13 @@ if(session.getAttribute("userID") != null){
 <meta name="viewport" content="width=device-width" initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css" />
 <title>JSP 게시판 웹사이트</title>
+<style type="text/css">
+a, a:hover{
+	color: #000000;
+	text-decoration:none;
+}
+
+</style>
 </head>
 <body>
 	<nav class ="navbar navbar-default">
@@ -30,7 +39,7 @@ if(session.getAttribute("userID") != null){
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="main.jsp">메인</a></li>
-				<li class="active"><a href="bbs.jsp">게시판</a></li>
+				<li class="active"><a href="list.do">게시판</a></li>
 			</ul>
 	
 		
@@ -69,7 +78,7 @@ if(session.getAttribute("userID") != null){
 	
 	<div class="container">
 		<div class="row">
-			<table class="table table-striped" style="text-align:center; border:1px solid #dddddd;">
+			<table class="table table-striped" style="text-align:center; border:1px solid #dddddd; table-layout:fixed;">
 				<thead>
 					<tr>
 						<th style="background-color: #eeeeee; text-align:center;">번호</th>
@@ -81,16 +90,27 @@ if(session.getAttribute("userID") != null){
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach items="${list }" var="dto">
 					<tr>
-						<td>1</td>
-						<td>안녕하세요</td>
-						<td>안녕하세요 내용입니다.</td>
-						<td>정다훈</td>
-						<td>2020-01-08</td>
-						<td>0</td>
+						<td>${dto.bbsID }</td>
+						<td><a href="view.do?bbsID=${dto.bbsID }">${dto.bbsTitle }</a></td>
+						<td style="text-overflow:epllipsis; overflow:hidden;">${dto.bbsContent }</td>
+						<td>${dto.userID }</td>
+						<td>${dto.bbsDate }</td>
+						<td>${dto.bbsHit }</td>
 					</tr>
+				</c:forEach>	
 				</tbody>
 			</table>
+			<c:choose>
+				<c:when test="${requestScope.pageNum != 1}">
+					<a href="list.do?pageNum=${requestScope.pageNum - 1 }" class="btn btn-success btn-arraw left">이전</a>
+				</c:when>
+				
+				<c:when test="${requestScope.nextPageNum }">
+					<a href="list.do?pageNum=${requestScope.pageNum + 1}" class="btn btn-success btn-arraw left">다음</a>
+				</c:when> 
+			</c:choose>
 			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 		</div>
 	</div>
